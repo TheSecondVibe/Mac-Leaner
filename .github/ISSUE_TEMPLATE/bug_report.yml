@@ -1,0 +1,68 @@
+name: Bug report
+description: Report something in Mac-Leaner that is broken or behaves unexpectedly.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please search [existing issues](https://github.com/TheSecondVibe/Mac-Leaner/issues) first to avoid duplicates.
+
+        **Found a security problem?** If Mac-Leaner could delete, move or read files beyond what you reviewed, do not file a public issue. [Report it privately](https://github.com/TheSecondVibe/Mac-Leaner/security/advisories/new) instead.
+  - type: input
+    id: app-version
+    attributes:
+      label: Mac-Leaner version
+      description: The release you are running, or the commit hash if you built from source.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      description: "Apple menu > About This Mac, or run `sw_vers` in Terminal."
+      placeholder: "macOS 15.5"
+    validations:
+      required: true
+  - type: dropdown
+    id: mac-type
+    attributes:
+      label: Mac type
+      options:
+        - Apple silicon
+        - Intel
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem. If files were removed or moved unexpectedly, say which ones and whether they are in the Trash.
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Mac-Leaner
+        2. Click ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen instead?
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots-logs
+    attributes:
+      label: Screenshots or logs
+      description: Optional. Drag in screenshots or paste relevant output. Remove any file names or paths you do not want to share publicly.
+    validations:
+      required: false

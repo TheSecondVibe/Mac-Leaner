@@ -1,0 +1,49 @@
+name: Feature request
+description: Suggest a new feature or an improvement to Mac-Leaner.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Please search [existing issues](https://github.com/TheSecondVibe/Mac-Leaner/issues) first. If someone has already asked for this, add your use case there.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or motivation
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would you like Mac-Leaner to do?
+    validations:
+      required: true
+  - type: textarea
+    id: cleanup-locations
+    attributes:
+      label: New cleanup locations (if any)
+      description: >-
+        If you are suggesting a new location to clean, list the paths, which app or tool creates the data,
+        and whether it is recreated automatically. This decides whether Mac-Leaner may delete it permanently
+        or must move it to the Trash.
+      placeholder: "~/Library/Caches/com.example.tool (recreated by the tool on next launch)"
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches or workarounds you have tried.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Screenshots, mockups, links, or anything else that helps.
+    validations:
+      required: false
